@@ -1,0 +1,10 @@
+{
+    "name": "impack/dumper",
+    "description": "PHP var dumper",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Impack\\Dumper\\": ""
+        }
+    }
+}
