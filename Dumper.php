@@ -198,14 +198,14 @@ class Dumper
             echo '<section>';
             echo "<h3>$filename</h3>";
             if ($ext == 'php') {
-                echo '<pre>';
                 try {
                     $data = include $file;
-                    echo htmlspecialchars(var_export($data, true));
+                    static::view('varbox', ['class' => '', 'var' => $data]);
                 } catch (\Throwable $th) {
+                    echo '<pre>';
                     echo rtrim(ltrim(file_get_contents($file), "<?php\r\nreturn"), ";\?\>");
+                    echo '</pre>';
                 }
-                echo '</pre>';
             } else {
                 echo file_get_contents($file);
             }
