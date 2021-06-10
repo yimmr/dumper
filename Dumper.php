@@ -6,8 +6,7 @@ use ReflectionObject;
 
 class Dumper
 {
-    public static $path;
-
+    public static $path = __DIR__;
     public static $show   = true;
     public static $boxcss = false;
 
